@@ -1,9 +1,15 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
 return {
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      pip = {
+        upgrade_pip = true,
+      },
+    },
+  },
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
@@ -12,6 +18,15 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "lua_ls",
+        "bashls",
+        "eslint",
+        "jedi_language_server",
+        "remark_ls",
+        "ruff_lsp",
+        "terraformls",
+        "tflint",
+        "tsserver",
+        "yamlls",
         -- add more arguments for adding more language servers
       })
     end,
@@ -24,6 +39,17 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "stylua",
+        "prettier",
+        "stylua",
+        "eslint_d",
+        "markdownlint",
+        "ruff",
+        "shellcheck",
+        "tflint",
+        "yamllint",
+        "markdownlint",
+        "prettier",
+        "prettierd",
         -- add more arguments for adding more null-ls sources
       })
     end,
@@ -35,6 +61,9 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "python",
+        "bash-debug-adapter",
+        "debugpy",
+        "js-debug-adapter",
         -- add more arguments for adding more debuggers
       })
     end,
