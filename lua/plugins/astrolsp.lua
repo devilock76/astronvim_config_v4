@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
@@ -46,10 +46,10 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      tsserver = function(opts)
-        opts.root_dir = require("lspconfig.util").root_pattern(".git")
-        return opts
-      end,
+      -- tsserver = function(opts)
+      --   opts.root_dir = require("lspconfig.util").root_pattern ".git"
+      --   return opts
+      -- end,
     },
     -- customize how language servers are attached
     handlers = {
