@@ -25,7 +25,7 @@ return {
         "ruff_lsp",
         "terraformls",
         "tflint",
-        "tsserver",
+        "ts_ls",
         "yamlls",
         -- add more arguments for adding more language servers
       })
